@@ -1,0 +1,156 @@
+body{
+    width: 100%;
+    min-width: 700px;
+    margin: 0;
+    background-color: black;
+}
+.function_bar{
+    top:50%;
+    right:0;
+    margin-top: -120px;
+    position: fixed;
+    width:50px;
+    height:240px;
+}
+.functions{
+    cursor: pointer;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: larger;
+    background-color: khaki;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+.functions:hover{
+    background-color: pink !important;
+}
+.function_detail{
+    top: 50%;
+    margin-top: -200px;
+    right:60px;
+    position: fixed;
+    width:300px; 
+    height:400px;
+    background-image: linear-gradient(pink,violet);
+    border-radius: 10px;
+    display: none;
+    padding: 10px;
+}
+.send_show{margin: 40px;width: 220px; height: 110px; font-size: larger; resize: none;border-radius: 10px;}
+#myPicture{margin-top: 10px;width: 100px;height: 100px;margin-left: 100px;background-color: white; object-fit: cover;}
+.my_description{margin-top: 10px;font-size: larger; margin-left: 50px;width: 200px;height: 55px;resize: none;}
+.send_password,.send_tags,.search_tags,.my_sex,.my_age{ height: 20px; width: 200px; font-size: larger; line-height: 20px; resize: none; margin-left: 50px;margin-top: 10px;}
+.send_button{ margin-top: 50px; margin-left: 100px; resize: horizontal; width: 100px; height: 50px;border-width: 0px; font-size: larger; border-radius: 10px; background-color: #80ffff;}
+.my_address,.select_sex,.select_degree{height: 30px;font-size: larger;margin-top: 10px;margin-left: 50px;}
+.select_degree{margin-left: 30px;}
+.filtrates{margin-top: 40px;margin-left: 50px; height: 150px; font-size: larger;}
+.age_selecter{ font-size: larger;margin-top: 10px;margin-left: 50px;}
+.talks{width: 100%;margin: 0px;overflow-inline: block;}
+.talk{
+    cursor: pointer;
+    display: inline-block;
+    height: 100px;
+    width: 200px;
+    background-color: papayawhip;
+    border-radius: 10px;
+    margin: 5px;
+    overflow:hidden;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.talk:hover{background-color: pink;}
+#talking{
+    width: 60%;
+    height: 60%;
+    min-width: 400px;
+    position: fixed;
+    border-radius: 10px;
+    top: 20%;
+    left: 20%;
+    background-image: linear-gradient(to left, pink,violet);
+    display: none;
+    font-size: larger;
+}
+#leftInformation,#rightInformation{
+    width: 120px;
+    overflow: hidden;
+    height: 100%;
+    margin: 0px;
+    border-radius: 10px;
+    text-align: center;
+    overflow:hidden;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+#rightInformation{
+    right:0;
+    position: absolute;
+    top: 0px;
+}
+#leftHead,#rightHead{
+    margin: 10px;
+    height: 100px;
+    width: 100px;
+    background: white;
+}
+
+#jiliguala{
+    left: 120px;
+    right: 120px;
+    width: auto;
+    position: absolute;
+    top: 0px;
+    height:100%;
+
+}
+#records{
+    height: 90%;
+    width: 100%;
+    top: 0px;
+    position: absolute;
+    background-color: wheat;
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+}
+.div::-webkit-scrollbar{
+    width: 2px;
+}
+#bottom{
+    width: 100%;
+    height: 10%;
+    top: 90%;
+    position: absolute;
+}
+
+#closeTalking,#sendTalking{
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    align-items: center;
+    justify-content:center;
+    display: flex;
+    cursor: pointer;
+}
+#closeTalking{
+    left: 0px;
+    background-color: tomato;
+}
+#sendTalking{
+    right: 0px;
+    background-color: cyan;
+}
+#inputTalking{
+    left: 10%;
+    right: 10%;
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    font-size: larger;
+    resize: none;
+    background-color: white;
+    padding: 0;
+    border: none;
+    display: flex;
+}

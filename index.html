@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>贴吧</title>
+    <script></script>
+</head>
+<body onload="init()" onselectstart="return false">
+    <div id="talking">
+        <div id="leftInformation">
+            <div id="leftHead"></div>
+            <div id="leftText"></div>
+        </div>
+        <div id="rightInformation">
+            <div id="rightHead"></div>
+            <div id="rightText"></div>
+        </div>
+        <div id='jiliguala'>
+            <div id="records"></div>
+            <div id="bottom">
+                <div id="closeTalking" onclick="closeTalking()">X</div>
+                <textarea id="inputTalking" placeholder="可输入html,maxlength=1000" onkeydown="enterSend(event)" maxlength="1000"></textarea>
+                <div id="sendTalking" onclick="sendTalking()">发送</div>
+            </div>
+        </div>
+    </div>
+    <div class="function_bar">
+        <div class="functions">发帖</div>
+        <div class="functions">筛选</div>
+        <div class="functions">我</div>
+    </div>
+    <div class="function_detail">
+        <textarea class="send_show" placeholder="展示"></textarea><br>
+        <textarea class="send_password"  placeholder="别填密码"></textarea><br>
+        <textarea class="send_tags"  placeholder="标签用空格隔开"></textarea><br>
+        <button onmousedown="sendText()" class="send_button">发贴</button>
+    </div>
+    <div class="function_detail">
+        
+        <div class="filtrates">
+            设有密码：<input class="filtrate" value="fil1" type="checkbox"><br>
+            年龄最近：<input class="filtrate" value="fil2" type="checkbox"><br>
+            位置最近：<input class="filtrate" value="fil3" type="checkbox"><br>
+            学历最近：<input class="filtrate" value="fil4" type="checkbox"><br>
+            异性：<input class="filtrate" value="fil5" type="checkbox">
+        </div>
+        <textarea class="search_tags" onfocus="" placeholder="标签以空格隔开"></textarea><br>
+        <a href="http://www.baidu.com" style="margin-left: 50px;color: green;
+        cursor: pointer;" target="_blank">查看今日标签排行</a>
+        <button onclick="filtrate()" class="send_button">筛选</button>
+    </div>
+    <div class="function_detail">
+        <img id="myPicture"  onclick="clickFileButton()"> <!-- 头像 -->
+        <input style="display: none;" id="chooseImage" accept="image/*" onchange="myHead()" type="file">
+        <select class="select_sex" onchange="mySex()">
+            <option value="none">⊙ω⊙</option>
+            <option value="man">男</option>
+            <option value="woman">女</option>
+            <option value="both">阴阳人</option>
+        </select>
+        <select class="select_degree" onchange="myDegree()">
+            <option value="none">＞ω＜</option>
+            <option value="primary">小学</option>
+            <option value="junior">初中</option>
+            <option value="senior">高中</option>
+            <option value="college">大学</option>
+            <option value="graduate">研究生</option>
+            <option value="doctor">博士</option>
+        </select>
+        <input class="age_selecter" type="month" onchange="myAge()">
+        <button onclick="myAddress()" class="my_address">获取我的位置</button>
+        <input type="color" id="colorInput" style="margin-left: 20px;" onchange="myColor()" >
+        <div style="font-size: large;margin-left: 50px;margin-top: 10px;">192.168.1.3</div>
+        <textarea class="my_description" placeholder="其他信息"></textarea>
+    </div>
+    <div class="talks">
+        <div class="talk" onclick="startTalk(id)" id="1234">
+            白日依山尽黄
+            河入海流 
+        欲穷千里目，更上一层楼
+        顺利打开就发觉失联飞机啊啥的六块腹肌啊；老师发了；sjdkf
+        laksdjlaksjdfiejdhuahsdufewhfhaksdjhfuehfkajshdfuehfkasjhdf
+        </div>
+        <div class="talk" onclick="startTalk(id)" id='4321'>
+            白日依山尽黄
+            河入海流 
+        欲穷千里目，更上一层楼
+        顺利发了；sjdkf
+        laksdjlaksjdfijshdfuehfkasjhdf
+        </div>
+        <div class="talk" onclick="startTalk()">
+            白日依山尽黄
+            河入海流 
+        欲穷df
+        </div>
+        <div class="talk" onclick="startTalk()">
+            白日依山尽黄
+            河入海流 
+        欲穷千里目，更上一层楼
+        顺利打开就发觉失联飞机啊啥的六块腹肌啊；老师发了；sjdkf
+        laksdjlaksjdfiejdhuahsdufewhfhaksdjhfuehfkajshdfuehfkasjhdf
+        </div>
+        <div class="talk" onclick="startTalk()">
+            白日依山尽黄
+            河入海流 
+        欲穷千里目，更上一层楼
+        顺利打开就发觉失联飞机啊啥的六块腹肌啊；老师发了；sjdkf
+        laksdjlaksjdfiejdhuahsdufewhfhaksdjhfuehfkajshdfuehfkasjhdf
+        </div>
+        <div class="talk" onclick="startTalk()">
+            白日依山尽黄
+            河入海流 
+        欲穷千里目，更上一层楼
+        顺利打开就发觉失联飞机啊啥的六块腹肌啊；老师发了；sjdkf
+        laksdjlaksjdfiejdhuahsdufewhfhaksdjhfuehfkajshdfuehfkasjhdf
+        </div>
+        <div class="talk" onclick="startTalk()">
+            白日依山尽黄
+            河入海流 
+        欲穷千里目，更上一层楼
+        顺利打开就发觉失联飞机啊啥的六块腹肌啊；老师发了；sjdkf
+        laksdjlaksjdfiejdhuahsdufewhfhaksdjhfuehfkajshdfuehfkasjhdf
+        </div>
+        <div class="talk" onclick="startTalk()">
+            白日依山尽黄
+            河入海流 
+        欲穷千里目，更上一层楼
+        顺利打开就发觉失联飞机啊啥的六块腹肌啊；老师发了；sjdkf
+        laksdjlaksjdfiejdhuahsdufewhfhaksdjhfuehfkajshdfuehfkasjhdf
+        </div>
+    </div>        
+</body>
+<script src="script.js"></script>
+</html>
